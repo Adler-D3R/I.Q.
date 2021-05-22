@@ -61,7 +61,7 @@ int S_Scan_V(char *ip)
 	printf("\n%s -------------------------------------------------- \n", KYEL);
 	printf(" %s Scan-Typ : Schnell Scan \n", KWHT);
 	printf(" %s Scan Ziel : %s \n", KWHT, ip);
-	printf(" %s Gescannte Ports : 21, 22, 23, 25, 53, 80, 110,\n  111, 135, 139, 143, 443, 445, 993, 995, 1723,\n  3306, 3389, 5900, 8080, 8081\n", KWHT);
+	printf(" %s Gescannte Ports : 21, 22, 23, 25, 53, 80, 110,\n  111, 135, 139, 143, 194, 443, 445, 993, 995,\n  3306, 3389, 5900, 8080, 8081\n", KWHT);
 	printf("%s -------------------------------------------------- \n \n", KYEL, KWHT);
 
 	for (int i = 0; i <= 20; i++)
@@ -77,11 +77,11 @@ int S_Scan_V(char *ip)
 		if (i == 8) sprintf(port, "%d", 135);
 		if (i == 9) sprintf(port, "%d", 139);
 		if (i == 10) sprintf(port, "%d", 143);
-		if (i == 11) sprintf(port, "%d", 443);
-		if (i == 12) sprintf(port, "%d", 445);
-		if (i == 13) sprintf(port, "%d", 993);
-		if (i == 14) sprintf(port, "%d", 995);
-		if (i == 15) sprintf(port, "%d", 1723);
+		if (i == 11) sprintf(port, "%d", 194);
+		if (i == 12) sprintf(port, "%d", 443);
+		if (i == 13) sprintf(port, "%d", 445);
+		if (i == 14) sprintf(port, "%d", 993);
+		if (i == 15) sprintf(port, "%d", 995);
 		if (i == 16) sprintf(port, "%d", 3306);
 		if (i == 17) sprintf(port, "%d", 3389);
 		if (i == 18) sprintf(port, "%d", 5900);
