@@ -147,7 +147,7 @@ int S_Scan_V(char *ip)
 	
 	if(p_offen == 0)
 	{
-		printf("\n%s %d  gescannt : Kein geöffneter Port wird erkannt. \n", KRED, p_total);
+		printf("\n%s %d gescannt : Kein geöffneter Port wird erkannt. \n", KRED, p_total);
 	}
 	else
 	{
@@ -202,7 +202,7 @@ int S_Scan_V(char *ip)
 		
 		if(p_offen == 0)
 		{
-			fprintf(f, "%s %d  gescannt : Kein geöffneter Port wird erkannt. \n", KRED, p_total);
+			fprintf(f, "%s %d gescannt : Kein geöffneter Port wird erkannt. \n", KRED, p_total);
 		}
 		else
 		{
@@ -342,7 +342,7 @@ int S_Scan_NV(char *ip)
 	
 	if(p_offen == 0)
 	{
-		printf("\n%s %d  gescannt : Kein geöffneter Port wird erkannt. \n", KRED, p_total);
+		printf("\n%s %d gescannt : Kein geöffneter Port wird erkannt. \n", KRED, p_total);
 	}
 	else
 	{
@@ -397,7 +397,7 @@ int S_Scan_NV(char *ip)
 		
 		if(p_offen == 0)
 		{
-			fprintf(f, "%s %d  gescannt : Kein geöffneter Port wird erkannt. \n", KRED, p_total);
+			fprintf(f, "%s %d gescannt : Kein geöffneter Port wird erkannt. \n", KRED, p_total);
 		}
 		else
 		{
