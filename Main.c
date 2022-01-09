@@ -95,33 +95,37 @@ void HauptMenu()
 	printf("%s  2. Server Info Bekommen \n", KWHT);
 	printf("%s  3. Subnetzwerk Scan \n", KWHT);
 	
+	char term;
+
 	printf ("\n  Modul >> ");
-	scanf("%d", &auswahl);
 	
-	if (auswahl == 0)
+	if(scanf("%d%c", &auswahl, &term) != 2 || term != '\n')
 	{
-		printf("\n%s I.Q. schaltet sich ab... \n", KYEL);
-		exit(0);
+	    HauptMenu();
 	}
-	else if (auswahl == 1)
+
+	switch(auswahl)
 	{
-		PortScanMenu();
-		HauptMenu();
-	}
-	else if (auswahl == 2)
-	{
-		WR_Scan();
-		HauptMenu();
-	}
-	else if (auswahl == 3)
-	{
-		SN_Scan();
-		HauptMenu();
-	}
-	else
-	{
-		printf("\n%s Bitte wählen Sie eine Modul-Nummer.", KRED);
-		HauptMenu();
+		case 0:
+			printf("\n%s I.Q. schaltet sich ab... \n", KYEL);
+			exit(0);
+			break;
+		case 1:
+			PortScanMenu();
+			HauptMenu();
+			break;
+		case 2:
+			WR_Scan();
+			HauptMenu();
+			break;
+		case 3:
+			SN_Scan();
+			HauptMenu();
+			break;
+		default:
+			printf("\n%s Bitte wählen Sie eine Modul-Nummer. \n", KRED);
+			HauptMenu();
+			break;
 	}
 }
 
@@ -141,29 +145,32 @@ void PortScanMenu()
 	printf("%s  2. Gezielter Port Scan \n", KWHT);
 	printf("%s  3. Full Port Scan \n", KWHT);
 	
+	char term;
+
 	printf ("\n  Modul >> ");
-	scanf("%d", &p_auswahl);
-	
-	if (p_auswahl == 0)
+	if(scanf("%d%c", &p_auswahl, &term) != 2 || term != '\n')
 	{
-		HauptMenu();
+	    PortScanMenu();
 	}
-	else if (p_auswahl == 1)
+
+	switch(p_auswahl)
 	{
-		S_Menu();
-	}
-	else if (p_auswahl == 2)
-	{
-		GZ_Menu();
-	}
-	else if (p_auswahl == 3)
-	{
-		F_Menu();
-	}
-	else
-	{
-		printf("\n%s Bitte wählen Sie eine Modul-Nummer.", KRED);
-		HauptMenu();
+		case 0:
+			HauptMenu();
+			break;
+		case 1:
+			S_Menu();
+			break;
+		case 2:
+			GZ_Menu();
+			break;
+		case 3:
+			F_Menu();
+			break;
+		default:
+			printf("\n%s Bitte wählen Sie eine Modul-Nummer. \n", KRED);
+			PortScanMenu();
+			break;
 	}
 }
 

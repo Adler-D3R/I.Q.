@@ -122,7 +122,7 @@ int GZ_Scan_V(char *ip, int e_port, int l_port)
 		printf("\n%s %d Port(s) gescannt : %d offen, %d geschlossen. \n \n", KGRN, p_total, p_offen, p_geschlossen);
 		
 		int a;
-		printf(" Offen Port(s) : \n");
+		printf(" %sOffen Port(s) : %s\n", KYEL, KWHT);
 		
 		for(a = 0; a < p_offen; a++){
 			
@@ -178,7 +178,7 @@ int GZ_Scan_V(char *ip, int e_port, int l_port)
 			fprintf(f, "%s %d Port(s) gescannt : %d offen, %d geschlossen. \n \n", KGRN, p_total, p_offen, p_geschlossen);
 			
 			int a;
-			fprintf(f, " Offen Port(s) : \n");
+			fprintf(f, "%s Offen Port(s) : %s\n", KYEL, KWHT);
 			
 			for(a = 0; a < p_offen; a++){
 				
@@ -299,7 +299,7 @@ int GZ_Scan_NV(char *ip, int e_port, int l_port)
 		printf("\n%s %d Port(s) gescannt : %d offen, %d geschlossen. \n \n", KGRN, p_total, p_offen, p_geschlossen);
 		
 		int a;
-		printf(" Offen Port(s) : \n");
+		printf("%s Offen Port(s) : %s\n", KYEL, KWHT);
 		
 		for(a = 0; a < p_offen; a++){
 			
@@ -355,7 +355,7 @@ int GZ_Scan_NV(char *ip, int e_port, int l_port)
 			fprintf(f, "%s %d Port(s) gescannt : %d offen, %d geschlossen. \n \n", KGRN, p_total, p_offen, p_geschlossen);
 			
 			int a;
-			fprintf(f, " Offen Port(s) : \n");
+			fprintf(f, "%s Offen Port(s) : %s\n", KYEL, KWHT);
 			
 			for(a = 0; a < p_offen; a++){
 				

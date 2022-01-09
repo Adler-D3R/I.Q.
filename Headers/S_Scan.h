@@ -66,27 +66,72 @@ int S_Scan_V(char *ip)
 
 	for (int i = 0; i <= 20; i++)
 	{	
-		if (i == 0) sprintf(port, "%d", 21);
-		if (i == 1) sprintf(port, "%d", 22);
-		if (i == 2) sprintf(port, "%d", 23);
-		if (i == 3) sprintf(port, "%d", 25);
-		if (i == 4) sprintf(port, "%d", 53);
-		if (i == 5) sprintf(port, "%d", 80);
-		if (i == 6) sprintf(port, "%d", 110);
-		if (i == 7) sprintf(port, "%d", 111);
-		if (i == 8) sprintf(port, "%d", 135);
-		if (i == 9) sprintf(port, "%d", 139);
-		if (i == 10) sprintf(port, "%d", 143);
-		if (i == 11) sprintf(port, "%d", 194);
-		if (i == 12) sprintf(port, "%d", 443);
-		if (i == 13) sprintf(port, "%d", 445);
-		if (i == 14) sprintf(port, "%d", 993);
-		if (i == 15) sprintf(port, "%d", 995);
-		if (i == 16) sprintf(port, "%d", 3306);
-		if (i == 17) sprintf(port, "%d", 3389);
-		if (i == 18) sprintf(port, "%d", 5900);
-		if (i == 19) sprintf(port, "%d", 8080);
-		if (i == 20) sprintf(port, "%d", 8081);
+		switch(i)
+		{
+			case 0:
+				sprintf(port, "%d", 21);
+				break;
+			case 1:
+				sprintf(port, "%d", 22);
+				break;
+			case 2:
+				sprintf(port, "%d", 23);
+				break;
+			case 3:
+				sprintf(port, "%d", 25);
+				break;
+			case 4:
+				sprintf(port, "%d", 53);
+				break;
+			case 5:
+				sprintf(port, "%d", 80);
+				break;
+			case 6:
+				sprintf(port, "%d", 110);
+				break;
+			case 7:
+				sprintf(port, "%d", 111);
+				break;
+			case 8:
+				sprintf(port, "%d", 135);
+				break;
+			case 9:
+				sprintf(port, "%d", 139);
+				break;
+			case 10:
+				sprintf(port, "%d", 143);
+				break;
+			case 11:
+				sprintf(port, "%d", 194);
+				break;
+			case 12:
+				sprintf(port, "%d", 443);
+				break;
+			case 13:
+				sprintf(port, "%d", 445);
+				break;
+			case 14:
+				sprintf(port, "%d", 993);
+				break;
+			case 15:
+				sprintf(port, "%d", 995);
+				break;
+			case 16:
+				sprintf(port, "%d", 3306);
+				break;
+			case 17:
+				sprintf(port, "%d", 3389);
+				break;
+			case 18:
+				sprintf(port, "%d", 5900);
+				break;
+			case 19:
+				sprintf(port, "%d", 8080);
+				break;
+			case 20:
+				sprintf(port, "%d", 8081);
+				break;
+		}
 		
 		time_t t = time(NULL);
   		struct tm tm = *localtime(&t);
@@ -154,7 +199,7 @@ int S_Scan_V(char *ip)
 		printf("\n%s %d Port(s) gescannt : %d offen, %d geschlossen. \n \n", KGRN, p_total, p_offen, p_geschlossen);
 		
 		int a;
-		printf(" Offen Port(s) : \n");
+		printf(" %sOffen Port(s) : %s\n", KYEL, KWHT);
 		
 		for(a = 0; a < p_offen; a++){
 			
@@ -209,7 +254,7 @@ int S_Scan_V(char *ip)
 			fprintf(f, "%s %d Port(s) gescannt : %d offen, %d geschlossen. \n \n", KGRN, p_total, p_offen, p_geschlossen);
 			
 			int a;
-			fprintf(f, " Offen Port(s) : \n");
+			fprintf(f, "%s Offen Port(s) : %s\n", KYEL, KWHT);
 			
 			for(a = 0; a < p_offen; a++){
 				
@@ -270,27 +315,72 @@ int S_Scan_NV(char *ip)
 
 	for (int i = 0; i <= 20; i++)
 	{	
-		if (i == 0) sprintf(port, "%d", 21);
-		if (i == 1) sprintf(port, "%d", 22);
-		if (i == 2) sprintf(port, "%d", 23);
-		if (i == 3) sprintf(port, "%d", 25);
-		if (i == 4) sprintf(port, "%d", 53);
-		if (i == 5) sprintf(port, "%d", 80);
-		if (i == 6) sprintf(port, "%d", 110);
-		if (i == 7) sprintf(port, "%d", 111);
-		if (i == 8) sprintf(port, "%d", 135);
-		if (i == 9) sprintf(port, "%d", 139);
-		if (i == 10) sprintf(port, "%d", 143);
-		if (i == 11) sprintf(port, "%d", 443);
-		if (i == 12) sprintf(port, "%d", 445);
-		if (i == 13) sprintf(port, "%d", 993);
-		if (i == 14) sprintf(port, "%d", 995);
-		if (i == 15) sprintf(port, "%d", 1723);
-		if (i == 16) sprintf(port, "%d", 3306);
-		if (i == 17) sprintf(port, "%d", 3389);
-		if (i == 18) sprintf(port, "%d", 5900);
-		if (i == 19) sprintf(port, "%d", 8080);
-		if (i == 20) sprintf(port, "%d", 8081);
+		switch(i)
+		{
+			case 0:
+				sprintf(port, "%d", 21);
+				break;
+			case 1:
+				sprintf(port, "%d", 22);
+				break;
+			case 2:
+				sprintf(port, "%d", 23);
+				break;
+			case 3:
+				sprintf(port, "%d", 25);
+				break;
+			case 4:
+				sprintf(port, "%d", 53);
+				break;
+			case 5:
+				sprintf(port, "%d", 80);
+				break;
+			case 6:
+				sprintf(port, "%d", 110);
+				break;
+			case 7:
+				sprintf(port, "%d", 111);
+				break;
+			case 8:
+				sprintf(port, "%d", 135);
+				break;
+			case 9:
+				sprintf(port, "%d", 139);
+				break;
+			case 10:
+				sprintf(port, "%d", 143);
+				break;
+			case 11:
+				sprintf(port, "%d", 194);
+				break;
+			case 12:
+				sprintf(port, "%d", 443);
+				break;
+			case 13:
+				sprintf(port, "%d", 445);
+				break;
+			case 14:
+				sprintf(port, "%d", 993);
+				break;
+			case 15:
+				sprintf(port, "%d", 995);
+				break;
+			case 16:
+				sprintf(port, "%d", 3306);
+				break;
+			case 17:
+				sprintf(port, "%d", 3389);
+				break;
+			case 18:
+				sprintf(port, "%d", 5900);
+				break;
+			case 19:
+				sprintf(port, "%d", 8080);
+				break;
+			case 20:
+				sprintf(port, "%d", 8081);
+				break;
+		}
 		
 		if ((ret = getaddrinfo(ip, port, &hints, &res)) != 0)
 		{
@@ -349,7 +439,7 @@ int S_Scan_NV(char *ip)
 		printf("\n%s %d Port(s) gescannt : %d offen, %d geschlossen. \n \n", KGRN, p_total, p_offen, p_geschlossen);
 		
 		int a;
-		printf(" Offen Port(s) : \n");
+		printf(" %sOffen Port(s) : %s\n", KYEL, KWHT);
 		
 		for(a = 0; a < p_offen; a++){
 			
@@ -404,7 +494,7 @@ int S_Scan_NV(char *ip)
 			fprintf(f, "%s %d Port(s) gescannt : %d offen, %d geschlossen. \n \n", KGRN, p_total, p_offen, p_geschlossen);
 			
 			int a;
-			fprintf(f, " Offen Port(s) : \n");
+			fprintf(f, " %sOffen Port(s) : %s\n", KYEL, KWHT);
 			
 			for(a = 0; a < p_offen; a++){
 				
@@ -447,7 +537,7 @@ int S_Menu()
 
 	printf("%s IP Adresse >> ", KWHT);
 	scanf("%s", &g_ip);
-	
+
 	printf("%s Verbose [J/N] >> ", KWHT);
 	scanf("%s", &g_verbose);
 	
