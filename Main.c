@@ -99,7 +99,7 @@ void HauptMenu()
 
 	printf ("\n  Modul >> ");
 	
-	if(scanf("%d%c", &auswahl, &term) != 2 || term != '\n')
+	if(scanf("%3d%c", &auswahl, &term) != 2 || term != '\n')
 	{
 	    HauptMenu();
 	}
@@ -148,7 +148,7 @@ void PortScanMenu()
 	char term;
 
 	printf ("\n  Modul >> ");
-	if(scanf("%d%c", &p_auswahl, &term) != 2 || term != '\n')
+	if(scanf("%3d%c", &p_auswahl, &term) != 2 || term != '\n')
 	{
 	    PortScanMenu();
 	}

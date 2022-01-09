@@ -30,8 +30,8 @@ void SN_Scan()
   
   char g_otp[5];
 	
-  printf("\n %sSpeichern ? [J/N] >> ", KYEL);
-  scanf("%s", &g_otp);
+  printf("\n %3sSpeichern ? [J/N] >> ", KYEL);
+  scanf("%3s", &g_otp);
 
   if( strcmp ("J", g_otp) == 0)
   {
