@@ -1,3 +1,6 @@
+#ifndef WR_SCAN_HEADER
+#define WR_SCAN_HEADER
+
 #include <stdio.h>
 #include <curl/curl.h>
 
@@ -1164,3 +1167,4 @@ void WR_Scan()
     }
   }
 }	
+#endif

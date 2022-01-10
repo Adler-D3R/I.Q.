@@ -1,3 +1,6 @@
+#ifndef GZ_SCAN_HEADER
+#define GZ_SCAN_HEADER
+
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
@@ -427,3 +430,4 @@ int GZ_Menu()
 
 	return 0;
 }
+#endif

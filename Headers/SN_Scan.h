@@ -1,3 +1,6 @@
+#ifndef SN_SCAN_HEADER
+#define SN_SCAN_HEADER
+
 #include <stdio.h>
 
 #define KNRM  "\x1B[0m"
@@ -61,3 +64,4 @@ void SN_Scan()
   }
   
 }
+#endif

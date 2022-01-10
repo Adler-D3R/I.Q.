@@ -1,3 +1,6 @@
+#ifndef F_SCAN_HEADER
+#define F_SCAN_HEADER
+
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
@@ -415,3 +418,4 @@ int F_Menu()
 
 	return 0;
 }
+#endif
