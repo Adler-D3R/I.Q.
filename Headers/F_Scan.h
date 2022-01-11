@@ -48,12 +48,12 @@ int F_Scan_V(char *ip, int e_port, int l_port)
 	
 	struct servent *sp;
 	
-	printf("\n%s -------------------------------------------------- \n", KYEL);
+	printf("\n%s ────────────────────────────────────────────────── \n", KYEL);
 	printf(" %s Scan-Typ : Full Scan \n", KWHT);
 	printf(" %s Scan Ziel : %s \n", KWHT, ip);
 	printf(" %s Starting Port : %d \n", KWHT, e_port);
 	printf(" %s Lätzte Port : %d \n", KWHT, l_port);
-	printf("%s -------------------------------------------------- \n \n", KYEL, KWHT);
+	printf("%s ────────────────────────────────────────────────── \n \n", KYEL, KWHT);
 
 	for (int i = e_port; i <= l_port; i++)
 	{
@@ -161,16 +161,16 @@ int F_Scan_V(char *ip, int e_port, int l_port)
 		    exit(1);
 		}
 		
-		fprintf(f, "%s ================================================== \n", KYEL);
+		fprintf(f, "%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ \n", KYEL);
 		fprintf(f, "%s                   FULL SCAN SUB-MODUL              \n", KWHT);
-		fprintf(f, "%s ================================================== \n", KYEL);
+		fprintf(f, "%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ \n", KYEL);
 
-		fprintf(f, "\n%s -------------------------------------------------- \n", KYEL);
+		fprintf(f, "\n%s ────────────────────────────────────────────────── \n", KYEL);
 		fprintf(f, " %s Scan-Typ : Full Scan \n", KWHT);
 		fprintf(f, " %s Scan Ziel : %s \n", KWHT, ip);
 		fprintf(f, " %s Starting Port : %d \n", KWHT, e_port);
 		fprintf(f, " %s Lätzte Port : %d \n", KWHT, l_port);
-		fprintf(f, "%s -------------------------------------------------- \n \n", KYEL, KWHT);
+		fprintf(f, "%s ────────────────────────────────────────────────── \n \n", KYEL, KWHT);
 		
 		if(p_offen == 0)
 		{
@@ -234,12 +234,12 @@ int F_Scan_NV(char *ip, int e_port, int l_port)
 	
 	struct servent *sp;
 	
-	printf("\n%s -------------------------------------------------- \n", KYEL);
+	printf("\n%s ────────────────────────────────────────────────── \n", KYEL);
 	printf(" %s Scan-Typ : Full Scan \n", KWHT);
 	printf(" %s Scan Ziel : %s \n", KWHT, ip);
 	printf(" %s Starting Port : %d \n", KWHT, e_port);
 	printf(" %s Lätzte Port : %d \n", KWHT, l_port);
-	printf("%s -------------------------------------------------- \n \n", KYEL, KWHT);
+	printf("%s ────────────────────────────────────────────────── \n \n", KYEL, KWHT);
 
 	for (int i = e_port; i <= l_port; i++)
 	{
@@ -338,16 +338,16 @@ int F_Scan_NV(char *ip, int e_port, int l_port)
 		    exit(1);
 		}
 		
-		fprintf(f, "%s ================================================== \n", KYEL);
+		fprintf(f, "%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ \n", KYEL);
 		fprintf(f, "%s                   FULL SCAN SUB-MODUL              \n", KWHT);
-		fprintf(f, "%s ================================================== \n", KYEL);
+		fprintf(f, "%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ \n", KYEL);
 
-		fprintf(f, "\n%s -------------------------------------------------- \n", KYEL);
+		fprintf(f, "\n%s ────────────────────────────────────────────────── \n", KYEL);
 		fprintf(f, " %s Scan-Typ : Full Scan \n", KWHT);
 		fprintf(f, " %s Scan Ziel : %s \n", KWHT, ip);
 		fprintf(f, " %s Starting Port : %d \n", KWHT, e_port);
 		fprintf(f, " %s Lätzte Port : %d \n", KWHT, l_port);
-		fprintf(f, "%s -------------------------------------------------- \n \n", KYEL, KWHT);
+		fprintf(f, "%s ────────────────────────────────────────────────── \n \n", KYEL, KWHT);
 		
 		if(p_offen == 0)
 		{
@@ -389,9 +389,9 @@ int F_Menu()
 {
 	printf("\n");
 	
-	printf("%s ================================================== \n", KYEL);
+	printf("%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ \n", KYEL);
 	printf("%s                   FULL SCAN SUB-MODUL              \n", KWHT);
-	printf("%s ================================================== \n \n", KYEL);
+	printf("%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ \n \n", KYEL);
 
 	char g_ip[100];
 	char g_verbose[5];

@@ -8,10 +8,10 @@
 #include <time.h>
 
 #include <unistd.h>
-#include <stdio.h>	
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <ctype.h> 
+#include <ctype.h>
 
 #define KNRM  "\x1B[0m"
 #define KRED  "\x1B[31m"
@@ -61,11 +61,11 @@ int S_Scan_V(char *ip)
 	
 	struct servent *sp;
 	
-	printf("\n%s -------------------------------------------------- \n", KYEL);
+	printf("\n%s ────────────────────────────────────────────────── \n", KYEL);
 	printf(" %s Scan-Typ : Schnell Scan \n", KWHT);
 	printf(" %s Scan Ziel : %s \n", KWHT, ip);
 	printf(" %s Gescannte Ports : 21, 22, 23, 25, 53, 80, 110,\n  111, 135, 139, 143, 194, 443, 445, 993, 995,\n  3306, 3389, 5900, 8080, 8081\n", KWHT);
-	printf("%s -------------------------------------------------- \n \n", KYEL, KWHT);
+	printf("%s ────────────────────────────────────────────────── \n \n", KYEL, KWHT);
 
 	for (int i = 0; i <= 20; i++)
 	{	
@@ -238,15 +238,15 @@ int S_Scan_V(char *ip)
 		    exit(1);
 		}
 				
-		fprintf(f, "%s ================================================== \n", KYEL);
+		fprintf(f, "%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ \n", KYEL);
 		fprintf(f, "%s                SCHNELL SCAN SUB-MODUL              \n", KWHT);
-		fprintf(f, "%s ================================================== \n", KYEL);
+		fprintf(f, "%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ \n", KYEL);
 
-		fprintf(f, "\n%s -------------------------------------------------- \n", KYEL);
+		fprintf(f, "\n%s ────────────────────────────────────────────────── \n", KYEL);
 		fprintf(f, " %s Scan-Typ : Schnell Scan \n", KWHT);
 		fprintf(f, " %s Scan Ziel : %s \n", KWHT, ip);
 		fprintf(f, " %s Gescannte Ports : 21, 22, 23, 25, 53, 80, 110,\n  111, 135, 139, 143, 443, 445, 993, 995, 1723,\n  3306, 3389, 5900, 8080, 8081\n", KWHT);
-		fprintf(f, "%s -------------------------------------------------- \n \n", KYEL, KWHT);
+		fprintf(f, "%s ────────────────────────────────────────────────── \n \n", KYEL, KWHT);
 		
 		if(p_offen == 0)
 		{
@@ -310,11 +310,11 @@ int S_Scan_NV(char *ip)
 	
 	struct servent *sp;
 	
-	printf("\n%s -------------------------------------------------- \n", KYEL);
+	printf("\n%s ──────────────────────────────────────────────────\n", KYEL);
 	printf(" %s Scan-Typ : Schnell Scan \n", KWHT);
 	printf(" %s Scan Ziel : %s \n", KWHT, ip);
 	printf(" %s Gescannte Ports : 21, 22, 23, 25, 53, 80, 110,\n  111, 135, 139, 143, 443, 445, 993, 995, 1723,\n  3306, 3389, 5900, 8080, 8081\n", KWHT);
-	printf("%s -------------------------------------------------- \n \n", KYEL, KWHT);
+	printf("%s ────────────────────────────────────────────────── \n \n", KYEL, KWHT);
 
 	for (int i = 0; i <= 20; i++)
 	{	
@@ -478,15 +478,15 @@ int S_Scan_NV(char *ip)
 		    exit(1);
 		}
 		
-		fprintf(f, "%s ================================================== \n", KYEL);
+		fprintf(f, "%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ \n", KYEL);
 		fprintf(f, "%s                SCHNELL SCAN SUB-MODUL              \n", KWHT);
-		fprintf(f, "%s ================================================== \n", KYEL);
+		fprintf(f, "%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ \n", KYEL);
 
-		fprintf(f, "\n%s -------------------------------------------------- \n", KYEL);
+		fprintf(f, "\n%s ────────────────────────────────────────────────── \n", KYEL);
 		fprintf(f, " %s Scan-Typ : Schnell Scan \n", KWHT);
 		fprintf(f, " %s Scan Ziel : %s \n", KWHT, ip);
 		fprintf(f, " %s Gescannte Ports : 21, 22, 23, 25, 53, 80, 110,\n  111, 135, 139, 143, 443, 445, 993, 995, 1723,\n  3306, 3389, 5900, 8080, 8081\n", KWHT);
-		fprintf(f, "%s -------------------------------------------------- \n \n", KYEL, KWHT);
+		fprintf(f, "%s ────────────────────────────────────────────────── \n \n", KYEL, KWHT);
 		
 		if(p_offen == 0)
 		{
@@ -528,9 +528,9 @@ int S_Menu()
 {
 	printf("\n");
 	
-	printf("%s ================================================== \n", KYEL);
+	printf("%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ \n", KYEL);
 	printf("%s                SCHNELL SCAN SUB-MODUL              \n", KWHT);
-	printf("%s ================================================== \n \n", KYEL);
+	printf("%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ \n \n", KYEL);
 
 	char g_ip[100];
 	char g_verbose[5];

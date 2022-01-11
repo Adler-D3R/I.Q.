@@ -16,15 +16,9 @@
 
 void SN_Scan()
 {
-  CURL *curl;
-  CURLcode res;
-  
-  char ip[100];
-  char querylink[150];
-  
-  printf("\n%s ================================================== \n", KYEL);
+  printf("\n%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ \n", KYEL);
   printf("%s                   SUBNETZWERK SCAN                \n", KWHT);
-  printf("%s ================================================== \n \n", KYEL);
+  printf("%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ \n \n", KYEL);
   
   printf("%s  Lokale IP A.     MAC Adresse        Hostname \n", KYEL);
   
@@ -49,9 +43,9 @@ void SN_Scan()
 		exit(1);
 	}
 	
-	fprintf(f, "\n%s ================================================== \n", KYEL);
+	fprintf(f, "\n%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ \n", KYEL);
 	fprintf(f, "%s                   SUBNETZWERK SCAN                \n", KWHT);
-	fprintf(f, "%s ================================================== \n \n", KYEL);
+	fprintf(f, "%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ \n \n", KYEL);
 	
 	fprintf(f, "%s  Lokale IP A.     MAC Adresse        Hostname \n", KYEL);
 	fprintf(f, "\n%s   ", KWHT);
