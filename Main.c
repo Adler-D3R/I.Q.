@@ -5,6 +5,8 @@
 #include "Headers/SN_Scan.h"
 
 #include<stdio.h>
+#include <unistd.h>
+#include <sys/ioctl.h>
 
 #define KNRM  "\x1B[0m"
 #define KRED  "\x1B[31m"
@@ -176,7 +178,19 @@ void PortScanMenu()
 
 int main(int argc, char *argv[])
 {
-	Logo();
+
+	struct winsize w;
+	ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
+
+	if(w.ws_row > 54 && w.ws_col > 133)
+	{
+		Logo();
+	}
+        else
+        {
+                printf("Too small");
+        }
+
 	HauptMenu();
 	return 0;
 }
