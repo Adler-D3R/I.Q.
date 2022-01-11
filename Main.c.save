@@ -7,6 +7,9 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/ioctl.h>
+#include <ctype.h>
+#include <stdbool.h>
+#include <string.h>
 
 #define KNRM  "\x1B[0m"
 #define KRED  "\x1B[31m"
@@ -83,7 +86,7 @@ void Uppercase();
 
 void HauptMenu()
 {
-	int auswahl;
+	char auswahl[3];
 
 	printf ("\n");
 	printf("%s ==================================================\n", KYEL);
@@ -97,19 +100,14 @@ void HauptMenu()
 	printf("%s  2. Server Info Bekommen \n", KWHT);
 	printf("%s  3. Subnetzwerk Scan \n", KWHT);
 
-	char term;
-
 	printf ("\n  Modul >> ");
 
-	if(scanf("%3d%c", &auswahl, &term) != 2 || term != '\n')
-        {
-            HauptMenu();
-        }
+	bool isCorrect = true
 
 	switch(auswahl)
 	{
 		case 0:
-			printf("\n%s I.Q. schaltet sich ab... \n \n", KYEL);
+			printf("\n%s I.Q. schaltet sich ab... \n", KYEL);
 			exit(0);
 			break;
 		case 1:
@@ -182,7 +180,7 @@ int main(int argc, char *argv[])
 	struct winsize w;
 	ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
 
-	if(w.ws_row > 25 && w.ws_col > 133)
+	if(w.ws_row > 54 && w.ws_col > 133)
 	{
 		Logo();
 	}
