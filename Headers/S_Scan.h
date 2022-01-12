@@ -534,7 +534,6 @@ int S_Menu()
 
 	char g_ip[100];
 	char g_verbose[5];
-	int g_timeout;
 	int g_e_port;
 	int g_l_port;
 

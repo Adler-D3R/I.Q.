@@ -30,7 +30,7 @@ void SN_Scan()
   printf("\n %3sSpeichern ? [J/N] >> ", KYEL);
   scanf("%3s", &g_otp);
 
-  if( strcmp ("J", g_otp) == 0)
+  if( strcmp ("J", g_otp) == 0 || strcmp ("j", g_otp) == 0)
   {
 	char otp[100];
 	sprintf(otp, "Subnetzwerk-Scan.txt");

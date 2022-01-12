@@ -3,6 +3,7 @@
 #include "Headers/F_Scan.h"
 #include "Headers/WR_Scan.h"
 #include "Headers/SN_Scan.h"
+#include "Headers/QH_Scan"
 
 #include <stdio.h>
 #include <string.h>
@@ -95,8 +96,9 @@ void HauptMenu()
 	
 	printf("%s  0. I.Q. Verlassen \n", KYEL);
 	printf("%s  1. Port-Scanner \n", KWHT);
-	printf("%s  2. Server Info Bekommen \n", KWHT);
-	printf("%s  3. Subnetzwerk Scan \n", KWHT);
+	printf("%s  2. Query Header Analysieren \n", KWHT);
+	printf("%s  3. Server Info Bekommen \n", KWHT);
+	printf("%s  4. Subnetzwerk Scan \n", KWHT);
 
 	printf ("\n  Modul >> ");
 	scanf("%3s", auswahl);
@@ -113,10 +115,15 @@ void HauptMenu()
 	}
 	else if(strcmp(auswahl, "2") == 0)
 	{
-	        WR_Scan();
+	        QH_Scan();
 	        HauptMenu();
 	}
 	else if(strcmp(auswahl, "3") == 0)
+	{
+	        WR_Scan();
+	        HauptMenu();
+	}
+	else if(strcmp(auswahl, "4") == 0)
 	{
 	        SN_Scan();
 	        HauptMenu();
