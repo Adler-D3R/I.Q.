@@ -148,7 +148,7 @@ int GZ_Scan_V(char *ip, int e_port, int l_port)
 	printf("\n %3sSpeichern ? [J/N] >> ", KYEL);
 	scanf("%s", &g_otp);
 
-	if( strcmp ("J", g_otp) == 0)
+	if( strcmp ("J", g_otp) == 0 || strcmp ("j", g_otp) == 0)
 	{
 		char otp[100];
 		sprintf(otp, "%s.txt", ip);
@@ -325,7 +325,7 @@ int GZ_Scan_NV(char *ip, int e_port, int l_port)
 	printf("\n %3sSpeichern ? [J/N] >> ", KYEL);
 	scanf("%s", &g_otp);
 
-	if( strcmp ("J", g_otp) == 0)
+	if( strcmp ("J", g_otp) == 0 || strcmp ("j", g_otp) == 0)
 	{
 		char otp[100];
 		sprintf(otp, "%s.txt", ip);
@@ -419,7 +419,7 @@ int GZ_Menu()
 	printf("%s Verbose [J/N] >> ", KWHT);
 	scanf("%5s", &g_verbose);
 	
-	if( strcmp (g_verbose, "J") == 0)
+	if( strcmp (g_verbose, "J") == 0 || strcmp (g_verbose, "j") == 0)
 	{
 		GZ_Scan_V(g_ip, e_port, l_port);
 	}

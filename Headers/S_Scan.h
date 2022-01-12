@@ -225,7 +225,7 @@ int S_Scan_V(char *ip)
 	printf("\n %3sSpeichern ? [J/N] >> ", KYEL);
 	scanf("%s", &g_otp);
 
-	if( strcmp ("J", g_otp) == 0)
+	if( strcmp ("J", g_otp) == 0 || strcmp ("j", g_otp) == 0)
 	{
 		char otp[100];
 		sprintf(otp, "%s.txt", ip);
@@ -465,7 +465,7 @@ int S_Scan_NV(char *ip)
 	printf("\n %3sSpeichern ? [J/N] >> ", KYEL);
 	scanf("%s", &g_otp);
 
-	if( strcmp ("J", g_otp) == 0)
+	if( strcmp ("J", g_otp) == 0 || strcmp ("j", g_otp) == 0)
 	{
 		char otp[100];
 		sprintf(otp, "%s.txt", ip);
@@ -544,7 +544,7 @@ int S_Menu()
 	printf("%s Verbose [J/N] >> ", KWHT);
 	scanf("%5s", &g_verbose);
 	
-	if( strcmp (g_verbose, "J") == 0)
+	if( strcmp (g_verbose, "J") == 0 || strcmp (g_verbose, "j") == 0)
 	{
 		S_Scan_V(g_ip);
 	}

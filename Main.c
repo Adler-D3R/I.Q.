@@ -5,6 +5,7 @@
 #include "Headers/SN_Scan.h"
 
 #include <stdio.h>
+#include <string.h>
 #include <unistd.h>
 #include <sys/ioctl.h>
 
@@ -83,7 +84,7 @@ void Uppercase();
 
 void HauptMenu()
 {
-	int auswahl;
+	char auswahl[3];
 
 	printf ("\n");
 	printf("%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n", KYEL);
@@ -97,43 +98,40 @@ void HauptMenu()
 	printf("%s  2. Server Info Bekommen \n", KWHT);
 	printf("%s  3. Subnetzwerk Scan \n", KWHT);
 
-	char term;
-
 	printf ("\n  Modul >> ");
+	scanf("%3s", auswahl);
 
-	if(scanf("%3d%c", &auswahl, &term) != 2 || term != '\n')
-        {
-            HauptMenu();
-        }
-
-	switch(auswahl)
+	if(strcmp(auswahl, "0") == 0)
 	{
-		case 0:
-			printf("\n%s I.Q. schaltet sich ab... \n \n", KYEL);
-			exit(0);
-			break;
-		case 1:
-			PortScanMenu();
-			HauptMenu();
-			break;
-		case 2:
-			WR_Scan();
-			HauptMenu();
-			break;
-		case 3:
-			SN_Scan();
-			HauptMenu();
-			break;
-		default:
-			printf("\n%s Bitte wählen Sie eine Modul-Nummer. \n", KRED);
-			HauptMenu();
-			break;
+	        printf("\n%s I.Q. schaltet sich ab... \n \n", KYEL);
+	        exit(0);
 	}
+	else if(strcmp(auswahl, "1") == 0)
+	{
+	        PortScanMenu();
+	        HauptMenu();
+	}
+	else if(strcmp(auswahl, "2") == 0)
+	{
+	        WR_Scan();
+	        HauptMenu();
+	}
+	else if(strcmp(auswahl, "3") == 0)
+	{
+	        SN_Scan();
+	        HauptMenu();
+	}
+	else
+	{
+	        printf("\n%s Bitte wählen Sie eine Modul-Nummer. \n", KRED);
+	        HauptMenu();
+	}
+
 }
 
 void PortScanMenu()
 {
-	int p_auswahl;
+	char p_auswahl[3];
 
 	printf ("\n");
 	printf("%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n", KYEL);
@@ -147,33 +145,31 @@ void PortScanMenu()
 	printf("%s  2. Gezielter Port Scan \n", KWHT);
 	printf("%s  3. Full Port Scan \n", KWHT);
 	
-	char term;
-
 	printf ("\n  Modul >> ");
-	if(scanf("%3d%c", &p_auswahl, &term) != 2 || term != '\n')
+	scanf("%3s", p_auswahl);
+
+	if(strcmp(p_auswahl, "0") == 0)
 	{
-	    PortScanMenu();
+	        HauptMenu();
+	}
+	else if(strcmp(p_auswahl, "1") == 0)
+	{
+	        S_Menu();
+	}
+	else if(strcmp(p_auswahl, "2") == 0)
+	{
+	        GZ_Menu();
+	}
+	else if(strcmp(p_auswahl, "3") == 0)
+	{
+	        F_Menu();
+	}
+	else
+	{
+	        printf("\n%s Bitte wählen Sie eine Modul-Nummer. \n", KRED);
+	        PortScanMenu();
 	}
 
-	switch(p_auswahl)
-	{
-		case 0:
-			HauptMenu();
-			break;
-		case 1:
-			S_Menu();
-			break;
-		case 2:
-			GZ_Menu();
-			break;
-		case 3:
-			F_Menu();
-			break;
-		default:
-			printf("\n%s Bitte wählen Sie eine Modul-Nummer. \n", KRED);
-			PortScanMenu();
-			break;
-	}
 }
 
 int main(int argc, char *argv[])
