@@ -5,9 +5,9 @@ NORMAL="\e[0m"
 echo ''
 echo -ne ' Installieren von Abhängigkeiten [                    ] [0%] (GCC)\r'
 sudo apt-get install gcc -y &> /dev/null
-echo -ne ' Installieren von Abhängigkeiten [====                ] [20%] (LIBCURL-DEV)\r'
-sudo apt-get install libcurl-dev -y &> /dev/null
-echo -ne ' Installieren von Abhängigkeiten [========            ] [40%] (LIBCURL4-OPENSSL-DEV&GNUTLS)\r'
+echo -ne ' Installieren von Abhängigkeiten [====                ] [20%] (CURL-AND-LIBCURL-DEV)\r'
+sudo apt-get install curl libcurl-dev -y &> /dev/null
+echo -ne ' Installieren von Abhängigkeiten [========            ] [40%] (LIBCURL4-OPENSSL-DEV-AND-GNUTLS)\r'
 sudo apt-get install libcurl4-openssl-dev libcurl4-gnutls-dev -y &> /dev/null
 echo -ne ' Installieren von Abhängigkeiten [============        ] [60%] (PHP&PHP-CLI)                 \r'
 sudo apt-get install php php-cli -y &> /dev/null
