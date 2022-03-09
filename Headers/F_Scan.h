@@ -33,11 +33,11 @@ int F_Scan_V(char *ip, int e_port, int l_port)
 
     int p_total = l_port - e_port + 1;
     int p_geschlossen = p_total;
-    int ret, status;
+    int ret = 0, status = 0;
     char port[6] = { 0 };
     
     int offen_ports[150];
-    int p_offen;
+    int p_offen = 0;
 
     struct timeval timeout;
     socklen_t len = sizeof(timeout);
@@ -219,11 +219,11 @@ int F_Scan_NV(char *ip, int e_port, int l_port)
 
     int p_total = l_port - e_port + 1;
     int p_geschlossen = p_total;
-    int ret, status;
+    int ret = 0, status = 0;
     char port[6] = { 0 };
     
     int offen_ports[150];
-    int p_offen;
+    int p_offen = 0;
 
     struct timeval timeout;
     socklen_t len = sizeof(timeout);
@@ -394,8 +394,8 @@ int F_Menu()
 
     char g_ip[100];
     char g_verbose[3];
-    int g_e_port;
-    int g_l_port;
+    int g_e_port = 0;
+    int g_l_port = 0;
 
     printf("%s IP Adresse >> ", KWHT);
     scanf("%99s", &g_ip);
