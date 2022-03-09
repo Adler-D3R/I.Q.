@@ -29,6 +29,7 @@ void WR_Scan()
 
   printf("%s  IP Adresse / Server >> ", KWHT);
   scanf("%99s", ip);
+  fflush(stdin);
   
   printf("\n");
   
@@ -571,6 +572,7 @@ void WR_Scan()
     
     printf("\n %3sSpeichern ? [J/N] >> ", KYEL);
     scanf("%2s", &g_otp);
+    fflush(stdin);
 
     if( strcmp ("J", g_otp) == 0)
     {
