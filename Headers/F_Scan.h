@@ -142,10 +142,10 @@ int F_Scan_V(char *ip, int e_port, int l_port)
         }
     }
     
-    char g_otp[5];
+    char g_otp[3];
     
     printf("\n %3sSpeichern ? [J/N] >> ", KYEL);
-    scanf("%s", &g_otp);
+    scanf("%2s", &g_otp);
 
     if( strcmp ("J", g_otp) == 0 || strcmp ("j", g_otp) == 0)
     {
@@ -319,10 +319,10 @@ int F_Scan_NV(char *ip, int e_port, int l_port)
         }
     }
     
-    char g_otp[5];
+    char g_otp[3];
     
     printf("\n %3sSpeichern ? [J/N] >> ", KYEL);
-    scanf("%s", &g_otp);
+    scanf("%2s", &g_otp);
 
     if( strcmp ("J", g_otp) == 0 || strcmp ("j", g_otp) == 0)
     {
@@ -393,18 +393,18 @@ int F_Menu()
     printf("%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ \n \n", KYEL);
 
     char g_ip[100];
-    char g_verbose[5];
+    char g_verbose[3];
     int g_e_port;
     int g_l_port;
 
     printf("%s IP Adresse >> ", KWHT);
-    scanf("%100s", &g_ip);
+    scanf("%99s", &g_ip);
     
     int e_port = 1;
     int l_port = 65536;
     
     printf("%s Verbose [J/N] >> ", KWHT);
-    scanf("%5s", &g_verbose);
+    scanf("%2s", &g_verbose);
     
     if( strcmp (g_verbose, "J") == 0 || strcmp (g_verbose, "j") == 0)
     {
