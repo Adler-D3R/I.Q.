@@ -1,7 +1,7 @@
 # I.Q. Software 🌐
 
 **This project is under no license, it means that you can see how I.Q. was made, nothing else.** <br>
-**I made this project for educational purposes only : it has not been to be stolen by anybody.**
+**I made this project for educational purposes only : it has not been made to be stolen by anybody.**
 
 ### 1. Overview and Features 💻
 ---
@@ -11,6 +11,7 @@ It has many features such as :
   - Remote Server Port Scanning and Service Discovery
   - Information Gathering on Servers
   - Subnetwork Scanning and Device Discovery
+  - PHP Query Analysing
   - Verbose Mode and also Output Saving
   - Proxychains Support [including TOR and Proxies]
 
