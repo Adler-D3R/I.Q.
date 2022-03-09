@@ -146,6 +146,7 @@ int GZ_Scan_V(char *ip, int e_port, int l_port)
 	
 	printf("\n %3sSpeichern ? [J/N] >> ", KYEL);
 	scanf("%2s", &g_otp);
+	fflush(stdin);
 
 	if( strcmp ("J", g_otp) == 0 || strcmp ("j", g_otp) == 0)
 	{
@@ -323,6 +324,7 @@ int GZ_Scan_NV(char *ip, int e_port, int l_port)
 	
 	printf("\n %sSpeichern ? [J/N] >> ", KYEL);
 	scanf("%2s", &g_otp);
+	fflush(stdin);
 
 	if( strcmp ("J", g_otp) == 0 || strcmp ("j", g_otp) == 0)
 	{
@@ -399,9 +401,11 @@ int GZ_Menu()
 
 	printf("%s IP Adresse >> ", KWHT);
 	scanf("%99s", &g_ip);
+	fflush(stdin);
 
 	printf("%s Erste Port >> ", KWHT);
 	scanf("%6d", &g_e_port);
+	fflush(stdin);
 	
 	printf("%s Letzte Port >> ", KWHT);
 	scanf("%6d", &g_l_port);
