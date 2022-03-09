@@ -28,7 +28,7 @@ void WR_Scan()
   printf("%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ \n \n", KYEL);
 
   printf("%s  IP Adresse / Server >> ", KWHT);
-  scanf("%100s", ip);
+  scanf("%99s", ip);
   
   printf("\n");
   
@@ -567,10 +567,10 @@ void WR_Scan()
     /* Cleanup */
     curl_easy_cleanup(curl);
     
-    char g_otp[5];
+    char g_otp[3];
     
     printf("\n %3sSpeichern ? [J/N] >> ", KYEL);
-    scanf("%s", &g_otp);
+    scanf("%2s", &g_otp);
 
     if( strcmp ("J", g_otp) == 0)
     {
