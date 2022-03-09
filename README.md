@@ -16,7 +16,7 @@ It has many features such as :
 ### 2. Compiling ⚙️
 ---
 
-**To compile I.Q., you will first need to install all the dependencies, using `Installer.sh` file. Use ``sudo chmod +x Installer.sh` to give the file execution rights, and then `sudo bash Installer.sh` to run it. Once done, type `sudo gcc Main.c -o I.Q. -lcurl`  to compile the program, and it's all good !**
+**To compile I.Q., you will first need to install all the dependencies, using `Installer.sh` file. Use `sudo chmod +x Installer.sh` to give the file execution rights, and then `sudo bash Installer.sh` to run it. Once done, type `sudo gcc Main.c -o I.Q. -lcurl`  to compile the program, and it's all good !**
 
 ### 3. Usage ⌨️
 ---
