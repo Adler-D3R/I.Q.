@@ -101,7 +101,7 @@ void HauptMenu()
 	printf("%s  4. Subnetzwerk Scan \n", KWHT);
 
 	printf ("\n  Modul >> ");
-	scanf("%3s", auswahl);
+	scanf("%2s", auswahl);
 
 	if(strcmp(auswahl, "0") == 0)
 	{
@@ -153,7 +153,7 @@ void PortScanMenu()
 	printf("%s  3. Full Port Scan \n", KWHT);
 	
 	printf ("\n  Modul >> ");
-	scanf("%3s", p_auswahl);
+	scanf("%2s", p_auswahl);
 
 	if(strcmp(p_auswahl, "0") == 0)
 	{
