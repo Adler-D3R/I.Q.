@@ -25,10 +25,10 @@ void SN_Scan()
   system("echo '\033[0;37m'");
   system("printf '   ' && sudo arp-scan -x --localnet | awk 1 ORS='\n   '");
   
-  char g_otp[5];
+  char g_otp[3];
 	
   printf("\n %3sSpeichern ? [J/N] >> ", KYEL);
-  scanf("%3s", &g_otp);
+  scanf("%2s", &g_otp);
 
   if( strcmp ("J", g_otp) == 0 || strcmp ("j", g_otp) == 0)
   {
