@@ -1,6 +1,7 @@
 # I.Q. Software 🌐
 
-**Join Discord for support : https://discord.gg/G7GvFvP4qH 🔊**
+**This project is under no license, it means that you can see how I.Q. was made, nothing else.**
+**I made this project for educational purposes only : it has not been to be stolen by anybody.**
 
 ### 1. Overview and Features 💻
 ---
@@ -22,3 +23,5 @@ It has many features such as :
 ---
 
 **All you have to do is to start I.Q. like a Linux executable. Just type `[sudo] ./I.Q.`, and here you go.**
+
+**Join Discord for support : https://discord.gg/G7GvFvP4qH 🔊**
