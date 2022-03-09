@@ -33,11 +33,11 @@ int GZ_Scan_V(char *ip, int e_port, int l_port)
 
 	int p_total = l_port - e_port + 1;
 	int p_geschlossen = p_total;
-	int ret, status;
+	int ret = 0, status = 0;
 	char port[6] = { 0 };
 	
 	int offen_ports[150];
-	int p_offen;
+	int p_offen = 0;
 
 	struct timeval timeout;
 	socklen_t len = sizeof(timeout);
@@ -219,11 +219,11 @@ int GZ_Scan_NV(char *ip, int e_port, int l_port)
 
 	int p_total = l_port - e_port + 1;
 	int p_geschlossen = p_total;
-	int ret, status;
+	int ret = 0, status = 0;
 	char port[6] = { 0 };
 	
 	int offen_ports[150];
-	int p_offen;
+	int p_offen = 0;
 
 	struct timeval timeout;
 	socklen_t len = sizeof(timeout);
