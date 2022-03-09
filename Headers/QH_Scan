@@ -25,7 +25,7 @@ void QH_Scan()
   printf("%s ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ \n \n", KYEL);
 
   printf("%s  Domain Name >> ", KWHT);
-  scanf("%100s", url);
+  scanf("%99s", url);
   
   printf("\n");
     
