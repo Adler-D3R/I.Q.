@@ -102,6 +102,7 @@ void HauptMenu()
 
 	printf ("\n  Modul >> ");
 	scanf("%2s", auswahl);
+	fflush(stdin);
 
 	if(strcmp(auswahl, "0") == 0)
 	{
