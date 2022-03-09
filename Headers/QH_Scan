@@ -37,5 +37,6 @@ void QH_Scan()
   sprintf(command, "printf '   ' && sudo curl %s -ISs | awk 1 ORS='\n   '", url);
   system(command);
 
-}	
+}
+
 #endif
