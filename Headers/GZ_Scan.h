@@ -1,16 +1,15 @@
 #ifndef GZ_SCAN_HEADER
 #define GZ_SCAN_HEADER
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <netdb.h>
 #include <time.h>
-
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 #define KNRM  "\x1B[0m"
 #define KRED  "\x1B[31m"
@@ -24,13 +23,13 @@
 
 int GZ_Scan_V(char *ip, int e_port, int l_port)
 {
-	struct addrinfo hints;
-	struct addrinfo *res;
-	struct addrinfo *record;
+	struct addrinfo hts;
+	struct addrinfo *ant;
+	struct addrinfo *rcd;
 
-	memset(&hints, 0, sizeof(hints));
-	hints.ai_family = AF_INET;
-	hints.ai_socktype = SOCK_STREAM;
+	memset(&hts, 0, sizeof(hts));
+	hts.ai_family = AF_INET;
+	hts.ai_socktype = SOCK_STREAM;
 
 	int p_total = l_port - e_port + 1;
 	int p_geschlossen = p_total;
@@ -66,15 +65,15 @@ int GZ_Scan_V(char *ip, int e_port, int l_port)
 		
 		printf("%s Scannen von Port %s \n", KWHT, port);
 		
-		if ((ret = getaddrinfo(ip, port, &hints, &res)) != 0)
+		if ((ret = getaddrinfo(ip, port, &hts, &ant)) != 0)
 		{
 			fprintf(stderr, "\n %sGetAddrInfo Fehler: %s\n", KRED, gai_strerror(ret));
 			return -1;
 		}
 
-		for (record = res; record != NULL; record = record->ai_next)
+		for (rcd = ant; rcd != NULL; rcd = rcd->ai_next)
 		{
-			status = socket(record->ai_family, record->ai_socktype, record->ai_protocol);
+			status = socket(rcd->ai_family, rcd->ai_socktype, rcd->ai_protocol);
 			if (status == -1) continue; 
 			
 			int s_port = atoi( port );
@@ -82,7 +81,7 @@ int GZ_Scan_V(char *ip, int e_port, int l_port)
 			sp = getservbyport( htons(s_port), NULL );
 
 			setsockopt(status, SOL_SOCKET, SO_SNDTIMEO, &timeout, len);
-			if (connect(status, record->ai_addr, record->ai_addrlen) != -1)
+			if (connect(status, rcd->ai_addr, rcd->ai_addrlen) != -1)
 			{
 				if (sp)
 				{
@@ -204,19 +203,19 @@ int GZ_Scan_V(char *ip, int e_port, int l_port)
 		printf("\n %sAusgabe gespeichert als : %s \n", KWHT, otp);
 	}
 
-	freeaddrinfo(res);
+	freeaddrinfo(ant);
 	return 0;
 }
 
 int GZ_Scan_NV(char *ip, int e_port, int l_port)
 {
-	struct addrinfo hints;
-	struct addrinfo *res;
-	struct addrinfo *record;
+	struct addrinfo hts;
+	struct addrinfo *ant;
+	struct addrinfo *rcd;
 
-	memset(&hints, 0, sizeof(hints));
-	hints.ai_family = AF_INET;
-	hints.ai_socktype = SOCK_STREAM;
+	memset(&hts, 0, sizeof(hts));
+	hts.ai_family = AF_INET;
+	hts.ai_socktype = SOCK_STREAM;
 
 	int p_total = l_port - e_port + 1;
 	int p_geschlossen = p_total;
@@ -245,15 +244,15 @@ int GZ_Scan_NV(char *ip, int e_port, int l_port)
 	{
 		sprintf(port, "%d", i);
 		
-		if ((ret = getaddrinfo(ip, port, &hints, &res)) != 0)
+		if ((ret = getaddrinfo(ip, port, &hts, &ant)) != 0)
 		{
 			fprintf(stderr, "\n %sGetAddrInfo Fehler: %s\n", KRED, gai_strerror(ret));
 			return -1;
 		}
 
-		for (record = res; record != NULL; record = record->ai_next)
+		for (rcd = ant; rcd != NULL; rcd = rcd->ai_next)
 		{
-			status = socket(record->ai_family, record->ai_socktype, record->ai_protocol);
+			status = socket(rcd->ai_family, rcd->ai_socktype, rcd->ai_protocol);
 			if (status == -1) continue; 
 			
 			int s_port = atoi( port );
@@ -261,7 +260,7 @@ int GZ_Scan_NV(char *ip, int e_port, int l_port)
 			sp = getservbyport( htons(s_port), NULL );
 
 			setsockopt(status, SOL_SOCKET, SO_SNDTIMEO, &timeout, len);
-			if (connect(status, record->ai_addr, record->ai_addrlen) != -1)
+			if (connect(status, rcd->ai_addr, rcd->ai_addrlen) != -1)
 			{
 				if (sp)
 				{
@@ -381,7 +380,7 @@ int GZ_Scan_NV(char *ip, int e_port, int l_port)
 		printf("\n %sAusgabe gespeichert als : %s \n", KWHT, otp);
 	}
 
-	freeaddrinfo(res);
+	freeaddrinfo(ant);
 	return 0;
 }
 
@@ -430,4 +429,5 @@ int GZ_Menu()
 
 	return 0;
 }
+
 #endif
