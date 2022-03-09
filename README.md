@@ -1,6 +1,6 @@
 # I.Q. Software 🌐
 
-**This project is under no license, it means that you can see how I.Q. was made, nothing else.**
+**This project is under no license, it means that you can see how I.Q. was made, nothing else.** <br>
 **I made this project for educational purposes only : it has not been to be stolen by anybody.**
 
 ### 1. Overview and Features 💻
