@@ -1166,5 +1166,6 @@ void WR_Scan()
 	printf("\n %sAusgabe gespeichert als : %s \n", KWHT, otp);
     }
   }
-}	
+}
+
 #endif
