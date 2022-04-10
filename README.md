@@ -1,7 +1,7 @@
 # I.Q. Software 🌐
 
-**This project is under no license, it means that you can see how I.Q. was made, nothing else.** <br>
-**I made this project for educational purposes only : it has not been made to be stolen by anybody.**
+**" Any fool can know. The point is to understand. " - Albert Einstein.** <br>
+**In other words, do not steal code you can't even understand.** <br>
 
 ### 1. Overview and Features 💻
 ---
