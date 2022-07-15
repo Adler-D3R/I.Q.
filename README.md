@@ -23,5 +23,3 @@
 ---
 
 **All you have to do is to start I.Q. like a Linux executable. Just type `[sudo] ./I.Q.`, and here you go.** <br>
-
-**Join Discord for support : https://discord.gg/G7GvFvP4qH 🔊**
