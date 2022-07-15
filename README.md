@@ -1,8 +1,5 @@
 # I.Q. Software 🌐
 
-**" Any fool can know. The point is to understand. " - Albert Einstein.** <br>
-**In other words, do not steal code you can't even do by yourself.** <br>
-
 ### 1. Overview and Features 💻
 ---
 
