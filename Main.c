@@ -10,6 +10,8 @@
 #include <unistd.h>
 #include <sys/ioctl.h>
 
+#define IQ_VERSION "1.5"
+
 #define KNRM  "\x1B[0m"
 #define KRED  "\x1B[31m"
 #define KGRN  "\x1B[32m"
