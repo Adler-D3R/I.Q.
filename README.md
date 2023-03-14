@@ -1,5 +1,9 @@
 # I.Q. Software 🌐
 
+![](https://img.shields.io/badge/Version-1.5-yellow?style=for-the-badge&color=fccf03&labelColor=292929)
+![](https://img.shields.io/badge/Platform-Linux-yellow?style=for-the-badge&color=fccf03&labelColor=292929)
+![](https://img.shields.io/badge/Language-C-yellow?style=for-the-badge&color=fccf03&labelColor=292929)
+
 ### 1. Overview and Features 💻
 ---
 
